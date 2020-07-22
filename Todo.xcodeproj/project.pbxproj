@@ -15,6 +15,7 @@
 		5438E57224C87FD10008850C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5438E57124C87FD10008850C /* Preview Assets.xcassets */; };
 		5438E57524C87FD10008850C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5438E57324C87FD10008850C /* LaunchScreen.storyboard */; };
 		5438E57D24C8841F0008850C /* ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5438E57C24C8841F0008850C /* ItemRowView.swift */; };
+		5438E57F24C8908C0008850C /* EditPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5438E57E24C8908C0008850C /* EditPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		5438E57424C87FD10008850C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5438E57624C87FD10008850C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5438E57C24C8841F0008850C /* ItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowView.swift; sourceTree = "<group>"; };
+		5438E57E24C8908C0008850C /* EditPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				5438E56724C87FD00008850C /* SceneDelegate.swift */,
 				5438E56C24C87FD00008850C /* ContentView.swift */,
 				5438E57C24C8841F0008850C /* ItemRowView.swift */,
+				5438E57E24C8908C0008850C /* EditPage.swift */,
 				5438E56E24C87FD10008850C /* Assets.xcassets */,
 				5438E57324C87FD10008850C /* LaunchScreen.storyboard */,
 				5438E57624C87FD10008850C /* Info.plist */,
@@ -152,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5438E57F24C8908C0008850C /* EditPage.swift in Sources */,
 				5438E56624C87FD00008850C /* AppDelegate.swift in Sources */,
 				5438E56B24C87FD00008850C /* Todo.xcdatamodeld in Sources */,
 				5438E56D24C87FD00008850C /* ContentView.swift in Sources */,

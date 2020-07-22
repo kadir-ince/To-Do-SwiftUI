@@ -8,6 +8,11 @@
 
 import SwiftUI
 
+func stringFromDate(_ date: Date) -> String {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "dd MMM yyyy HH:mm" // yyyy
+    return formatter.string(from: date)
+}
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
@@ -50,11 +55,15 @@ struct ContentView: View {
                         Text("Hurry Up").tag("🚀")
                     }
                     .pickerStyle(SegmentedPickerStyle())
-                    ForEach(fetchedItems, id: \.self) { toDoItems in
-                        ItemRowView(item: toDoItems.item ?? "Empty", createAt: stringFromDate(toDoItems.createdAt!), priority: toDoItems.priority ?? "Empty")
-
-                    }.onDelete(perform: removeItem)
+                    
+                        ForEach(fetchedItems, id: \.self) { toDoItems in
+                            NavigationLink(destination: EditPage()) {
+                            ItemRowView(item: toDoItems.item ?? "Empty", createAt: stringFromDate(toDoItems.createdAt!), priority: toDoItems.priority ?? "Empty")
+                            }
+                        }.onDelete(perform: removeItem)
+                    
                 }
+
                 .navigationBarTitle("Todo")
                 .navigationBarItems(trailing: EditButton())
             }
@@ -78,12 +87,4 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
-}
-
-
-
-func stringFromDate(_ date: Date) -> String {
-    let formatter = DateFormatter()
-    formatter.dateFormat = "dd MMM yyyy HH:mm" //yyyy
-    return formatter.string(from: date)
 }
