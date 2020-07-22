@@ -14,6 +14,7 @@
 		5438E56F24C87FD10008850C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5438E56E24C87FD10008850C /* Assets.xcassets */; };
 		5438E57224C87FD10008850C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5438E57124C87FD10008850C /* Preview Assets.xcassets */; };
 		5438E57524C87FD10008850C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5438E57324C87FD10008850C /* LaunchScreen.storyboard */; };
+		5438E57D24C8841F0008850C /* ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5438E57C24C8841F0008850C /* ItemRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		5438E57124C87FD10008850C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5438E57424C87FD10008850C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5438E57624C87FD10008850C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5438E57C24C8841F0008850C /* ItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				5438E57624C87FD10008850C /* Info.plist */,
 				5438E56924C87FD00008850C /* Todo.xcdatamodeld */,
 				5438E57024C87FD10008850C /* Preview Content */,
+				5438E57C24C8841F0008850C /* ItemRowView.swift */,
 			);
 			path = Todo;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				5438E56B24C87FD00008850C /* Todo.xcdatamodeld in Sources */,
 				5438E56D24C87FD00008850C /* ContentView.swift in Sources */,
 				5438E56824C87FD00008850C /* SceneDelegate.swift in Sources */,
+				5438E57D24C8841F0008850C /* ItemRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
