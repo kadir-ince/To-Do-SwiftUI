@@ -8,11 +8,7 @@
 
 import SwiftUI
 
-func stringFromDate(_ date: Date) -> String {
-    let formatter = DateFormatter()
-    formatter.dateFormat = "dd MMM yyyy HH:mm" // yyyy
-    return formatter.string(from: date)
-}
+
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
@@ -50,9 +46,9 @@ struct ContentView: View {
                         }
                     }
                     Picker(selection: $setPriority, label: Text("")) {
-                        Text("No Hurry ").tag("🥱")
-                        Text("Normal").tag("📜")
-                        Text("Hurry Up").tag("🚀")
+                        Text("No Hurry 🥱").tag("🥱")
+                        Text("Normal 📜").tag("📜")
+                        Text("Hurry Up 🚀").tag("🚀")
                     }
                     .pickerStyle(SegmentedPickerStyle())
                     
@@ -81,10 +77,18 @@ struct ContentView: View {
             print(error.localizedDescription)
         }
     }
+    
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
+}
+
+func stringFromDate(_ date: Date) -> String {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "dd MMM yyyy HH:mm" // yyyy
+    return formatter.string(from: date)
 }

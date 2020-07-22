@@ -10,12 +10,6 @@ import SwiftUI
 
 struct EditPage: View {
     var body: some View {
-        Text("Edit Page")
-    }
-}
-
-struct EditPage_Previews: PreviewProvider {
-    static var previews: some View {
-        EditPage()
+        Text("Edit Page (Updating...)")
     }
 }

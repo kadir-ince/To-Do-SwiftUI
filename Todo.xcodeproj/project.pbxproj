@@ -30,6 +30,7 @@
 		5438E57624C87FD10008850C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5438E57C24C8841F0008850C /* ItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowView.swift; sourceTree = "<group>"; };
 		5438E57E24C8908C0008850C /* EditPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPage.swift; sourceTree = "<group>"; };
+		5438E58024C89A560008850C /* Todo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Todo.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,11 +63,12 @@
 		5438E56424C87FD00008850C /* Todo */ = {
 			isa = PBXGroup;
 			children = (
+				5438E58024C89A560008850C /* Todo.entitlements */,
 				5438E56524C87FD00008850C /* AppDelegate.swift */,
 				5438E56724C87FD00008850C /* SceneDelegate.swift */,
 				5438E56C24C87FD00008850C /* ContentView.swift */,
-				5438E57C24C8841F0008850C /* ItemRowView.swift */,
 				5438E57E24C8908C0008850C /* EditPage.swift */,
+				5438E57C24C8841F0008850C /* ItemRowView.swift */,
 				5438E56E24C87FD10008850C /* Assets.xcassets */,
 				5438E57324C87FD10008850C /* LaunchScreen.storyboard */,
 				5438E57624C87FD10008850C /* Info.plist */,
@@ -296,6 +298,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Todo/Todo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Todo/Preview Content\"";
 				DEVELOPMENT_TEAM = WTTJUAT5Q9;
@@ -307,8 +310,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kadirince.Todo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -316,6 +320,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Todo/Todo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Todo/Preview Content\"";
 				DEVELOPMENT_TEAM = WTTJUAT5Q9;
@@ -327,8 +332,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kadirince.Todo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
