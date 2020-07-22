@@ -9,8 +9,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var todoItem = ""
+    @State private var setPriority = ""
     var body: some View {
-        Text("Hello, World!")
+        
     }
 }
 
