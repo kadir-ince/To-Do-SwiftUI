@@ -8,15 +8,20 @@
 
 import SwiftUI
 
+
+
 struct ItemRowView: View {
     var item: String
-    var createAt: Date = Date()
+    var createAt: String = Date().getFormattedDate(format: "MMM d, h:mm a")
     var priority: String = ""
+    
+    
+    
+    
     var body: some View {
         HStack{
             Text(priority)
                 .font(.headline)
-            
             VStack(alignment:.leading){
                 Text(item)
                     .font(.headline)
@@ -25,6 +30,14 @@ struct ItemRowView: View {
                 .lineLimit(3)
             }
         }
+    }
+}
+
+extension Date {
+   func getFormattedDate(format: String) -> String {
+        let dateformat = DateFormatter()
+        dateformat.dateFormat = format
+        return dateformat.string(from: self)
     }
 }
 

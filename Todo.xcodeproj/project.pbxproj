@@ -63,12 +63,12 @@
 				5438E56524C87FD00008850C /* AppDelegate.swift */,
 				5438E56724C87FD00008850C /* SceneDelegate.swift */,
 				5438E56C24C87FD00008850C /* ContentView.swift */,
+				5438E57C24C8841F0008850C /* ItemRowView.swift */,
 				5438E56E24C87FD10008850C /* Assets.xcassets */,
 				5438E57324C87FD10008850C /* LaunchScreen.storyboard */,
 				5438E57624C87FD10008850C /* Info.plist */,
 				5438E56924C87FD00008850C /* Todo.xcdatamodeld */,
 				5438E57024C87FD10008850C /* Preview Content */,
-				5438E57C24C8841F0008850C /* ItemRowView.swift */,
 			);
 			path = Todo;
 			sourceTree = "<group>";

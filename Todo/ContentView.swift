@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
     @State private var todoItem = ""
@@ -49,22 +50,25 @@ struct ContentView: View {
                         Text("Hurry Up").tag("🚀")
                     }
                     .pickerStyle(SegmentedPickerStyle())
-                    ForEach(fetchedItems, id:\.self){toDoItems in
-                        ItemRowView(item: toDoItems.item ?? "Empty", createAt: toDoItems.createdAt!, priority: toDoItems.priority ?? "Empty")
-                        
+                    ForEach(fetchedItems, id: \.self) { toDoItems in
+                        ItemRowView(item: toDoItems.item ?? "Empty", createAt: stringFromDate(toDoItems.createdAt!), priority: toDoItems.priority ?? "Empty")
+
                     }.onDelete(perform: removeItem)
-                }.navigationBarTitle("Todo")
+                }
+                .navigationBarTitle("Todo")
+                .navigationBarItems(trailing: EditButton())
             }
         }.environment(\.colorScheme, .dark)
     }
-    func removeItem(at offsets: IndexSet){
-        for index in offsets{
+
+    func removeItem(at offsets: IndexSet) {
+        for index in offsets {
             let item = fetchedItems[index]
             managedObjectContext.delete(item)
         }
         do {
             try managedObjectContext.save()
-        } catch  {
+        } catch {
             print(error.localizedDescription)
         }
     }
@@ -74,4 +78,12 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
+}
+
+
+
+func stringFromDate(_ date: Date) -> String {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "dd MMM yyyy HH:mm" //yyyy
+    return formatter.string(from: date)
 }
